@@ -12,22 +12,22 @@ function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
-    // setAlert({
-    //   msg: message,
-    //   type: type,
-    // });
-    // setTimeout(() => {
-    //   setAlert(null);
-    // }, 1300);
+    setAlert({
+      msg: message,
+      type: type,
+    });
+    setTimeout(() => {
+      setAlert(null);
+    }, 1300);
 
-    Swal.fire({ title: message, icon: type, timer: 1500 });
+    // Swal.fire({ title: message, icon: type, timer: 1500 });
   };
   const toggleMode = () => {
     if (mode == "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#242655";
       showAlert("Dark Mode has been enabled", "success");
-      document.title = "TEXTuTILS- Dark Mode";
+      // document.title = "TEXTuTILS- Dark Mode";
       // setInterval(()=>{
       //   document.title="TEXTuTILS- Download Now"
       // },2000)
@@ -38,7 +38,7 @@ function App() {
       setMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light Mode has been enabled", "success");
-      document.title = "TEXTuTILS- Light Mode";
+      // document.title = "TEXTuTILS- Light Mode";
     }
   };
   return (
@@ -52,7 +52,7 @@ function App() {
             <div className="container my-5">
               <Textform
                 showAlert={showAlert}
-                heading="Enter the text below:"
+                heading="Try TEXTuTILS- Word Counter, Chracater Counter, Remove extra spaces:"
                 mode={mode}
               />
             </div>

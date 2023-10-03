@@ -19,7 +19,7 @@ const Navbar = (props) => {
           <li className="nav-item">
             <Link className="nav-link" to="/about">{props.about}</Link>
           </li>
-          <li className="nav-item dropdown">
+          <li className="nav-item dropdown d-flex">
             <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {props.contact}
             </Link>
