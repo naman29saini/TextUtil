@@ -17,7 +17,7 @@ const Textform = (props) => {
         let text=document.getElementById("myBox")
         text.select();
         navigator.clipboard.writeText(text.value)
-        document.getSelection().removeAllRanges();
+        document.getSelection().removeAllRanges()
         props.showAlert("Copied successfully","success")
     }
     const handleSpaces=()=>{
