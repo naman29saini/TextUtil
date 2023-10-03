@@ -54,7 +54,7 @@ const Textform = (props) => {
     <p> <i>{text.split(" ").filter((element)=>{return element.length!=0}).length} words & {text.length} characters</i></p>
     <p> {0.008 *text.split(" ").filter((element)=>{return element.length!=0}).length} minutes to read</p><hr/>
     <h4>Preview</h4>
-    <p>{text.length>0?text:"Enter something in the textbox to preview"}</p><hr/>
+    <p>{text.length>0?text:"Nothing to preview!"}</p><hr/>
   </div>
    </>
   )
