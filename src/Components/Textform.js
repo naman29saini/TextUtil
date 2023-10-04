@@ -14,10 +14,11 @@ const Textform = (props) => {
         props.showAlert("Converted to lowercase","success")
     }
     const handleCopy=()=>{
-        let text=document.getElementById("myBox")
-        text.select();
-        navigator.clipboard.writeText(text.value)
-        document.getSelection().removeAllRanges()
+        // let text=document.getElementById("myBox")
+        // text.select();
+        navigator.clipboard.writeText(text)
+        // navigator.clipboard.writeText(text.value)
+        // document.getSelection().removeAllRanges()
         props.showAlert("Copied successfully","success")
     }
     const handleSpaces=()=>{
@@ -51,7 +52,7 @@ const Textform = (props) => {
      
   <div className="container mx-4"style={{color:props.mode=='light'?'black':'white'}}>
     <h4><u>Text Summary</u></h4>
-    <p> <i>{text.split(" ").filter((element)=>{return element.length!=0}).length} words & {text.length} characters</i></p>
+    <p> <i>{text.split(/\s+/).filter((element)=>{return element.length!=0}).length} words & {text.length} characters</i></p>
     <p> {0.008 *text.split(" ").filter((element)=>{return element.length!=0}).length} minutes to read</p><hr/>
     <h4>Preview</h4>
     <p>{text.length>0?text:"Nothing to preview!"}</p><hr/>

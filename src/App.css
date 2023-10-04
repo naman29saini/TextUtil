@@ -10,3 +10,6 @@
   width: 100%;
   text-align: center;
 }
+.accordion-button::after {
+  filter: invert(1);
+}

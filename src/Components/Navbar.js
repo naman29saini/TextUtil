@@ -14,13 +14,13 @@ const Navbar = (props) => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="/">{props.home}</Link>
+            <Link className="nav-link text-success" aria-current="page" to="/">{props.home}</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about">{props.about}</Link>
+            <Link className="nav-link text-success" to="/about">{props.about}</Link>
           </li>
-          <li className="nav-item dropdown d-flex">
-            <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li className="nav-item dropdown d-flex text-success">
+            <Link className="nav-link dropdown-toggle text-success" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {props.contact}
             </Link>
             <ul className="dropdown-menu">
@@ -35,8 +35,8 @@ const Navbar = (props) => {
           </li>
         </ul>
         <form className="d-flex" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-success" type="submit">Search</button>
+          <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search"/>
+          <button className="btn btn-outline-success me-4" type="submit">Search</button>
         </form>
       </div>
     <div className={`form-check form-switch text-${props.mode=='light'?'dark':'light'}`}>
