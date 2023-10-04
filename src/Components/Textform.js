@@ -32,7 +32,7 @@ const Textform = (props) => {
         props.showAlert("Reset successfully","success")
     }
     const buttonOnChange=(event)=>{
-        setText(event.target.value)
+        setText(event.target.value);
     }
     const[text, setText]=useState("");
      return (
