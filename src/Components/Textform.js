@@ -14,12 +14,12 @@ const Textform = (props) => {
         props.showAlert("Converted to lowercase","success")
     }
     const handleCopy=()=>{
+        navigator.clipboard.writeText(text)
+        props.showAlert("Copied successfully","success")
         // let text=document.getElementById("myBox")
         // text.select();
-        navigator.clipboard.writeText(text)
         // navigator.clipboard.writeText(text.value)
         // document.getSelection().removeAllRanges()
-        props.showAlert("Copied successfully","success")
     }
     const handleSpaces=()=>{
         let newtext=text.split(/[ ]+/);
